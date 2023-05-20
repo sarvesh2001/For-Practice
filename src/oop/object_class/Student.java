@@ -4,18 +4,28 @@ package oop.object_class;
 public class Student {
 
 	//defining fields
-	int id;//fiels or data member or instance variable;
-	String name;
+	private int id;//fiels or data member or instance variable;
+	private String name;
+	
+	public void setId(int id){
+		this.id = id;
+	}
+	public int getId(){
+		return this.id;
+	}
+	public void setName(String name){
+		this.name = name;
+	}
+	public String getName(){
+		return this.name;
+	}
 	//creating main method inside the student class
 	public static void main(String args[]) {
 		//creating an object or instance
 		Student s1 = new Student();//creating an object of student
-		//seting
-		s1.id = 1;
-		s1.name = "hello-world";
-		//Printing values of the object
-		System.out.println(s1.id);//accessing member through reference variable
-		System.out.println(s1.name);
+		s1.setId(1);s1.SetName("Hello-world-I-am-secure");
+		System.out.println("ID : "+s1.getId());
+		System.out.println("Name : "+s1.getName());
 	}
 	
 }
